@@ -1,0 +1,55 @@
+#navbar{
+    background-color: #1e1d1d;
+}
+body{
+    background-color: #cbb799;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+.pulse-effect {
+    animation: pulse 2s infinite;
+}
+
+.page-transition {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.page-transition.active {
+    opacity: 1;
+}
+
+.parallax {
+    background-image: url('image.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+:root {
+    --main-color: #333;
+}
+.variable-color {
+    color: var(--main-color);
+    transition: color 0.3s ease;
+}
+.variable-color:hover {
+    --main-color: #0077cc;
+}
